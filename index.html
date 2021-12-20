@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Joana e sua calculadora</title>
+</head>
+
+<body>
+    <h1>Joana & Juros</h1>
+    <section>
+        <div class=main>
+            <div class=main-content>
+                <form>
+                    <div id="register-options">
+                        <h2>Dados</h2>
+                        <label for="personName" class="form_control">Nome:</label>
+                        <input type="text" id="personName" required />
+                        <label for="possibleDate" class="form_control">Data de Vencimento:</label>
+                        <input type="date" id="possibleDate" required />
+                        <label for="possibleValue" class="form_control">Valor da Compra:</label>
+                        <input type="number" id="possibleValue" required />
+                        <button type="button" onclick="register()">
+                            Adicionar Compra </button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="overlay">
+        <label>MinimumDate</label>
+        <input type="date" id="minimumDate" />
+        <label>MaximumDate</label>
+        <input type="date" id="maximumDate" />
+        <label> MinimumValue</label>
+        <input type="number" id="minimumValue" />
+        <label>MaximumValue</label>
+        <input type="number" id="maximumValue" />
+    </div>
+    <section>
+        <div id="table-answers">
+            <h1>Contas registradas</h1>
+            <div id="account"></div>
+            <button type="button" onclick=calculateInterest()>Calcular os juros</button>
+            <button type="button" onclick=byClient()>Agrupar por Cliente </button>
+            <button type="button" onclick=byDate()> Agrupar por vencimento</button>
+            <button type="button" onclick=filterMethod()> Filtre</button>
+            <div id="showGroups">
+                <table id="groups" border="1"></table>
+            </div>
+            <div id="allTotal"></div>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
